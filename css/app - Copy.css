@@ -1,0 +1,312 @@
+/*rules*/
+@font-face {
+  font-family: League;
+  src: url('fonts/RalewayThin.otf');
+}
+
+@font-face {
+  font-family: Adec;
+  src: url('fonts/ss_adec.otf');
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.hide {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.tableCell {
+  display: table-cell;
+}
+
+
+.table {
+  display: table;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.clear {
+  clear: both;
+}
+
+.middle {
+  vertical-align: middle;
+}
+
+.alignBottom {
+  vertical-align: bottom;
+}
+
+.center {
+  text-align: center;
+}
+
+.hunned {
+  display: block;
+  height: 100%;
+  margin-bottom: 0;
+  max-width: 100%;
+}
+
+*, h1, h2, h3, h4, h5, h6 {
+  color: #fff;
+  outline: none;
+}
+
+h2 {
+  color: #000;
+  font-family: "Adec";
+  font-size: 2.5em;
+  font-weight: 500;
+}
+
+p {
+  color: #000;
+  font-size: 1.5em;
+}
+
+body {
+  font-family: "League";
+}
+
+html,
+body,
+.mainRow,
+.contentHolder,
+.centered {
+  height: 100%;
+  max-width: 100%;
+}
+
+
+
+
+/*navigation*/
+.nav.hunned {
+  background: #FFF5EE;
+  display: table;
+}
+
+.onepage-pagination {
+  left: 0;
+  list-style: none outside none;
+  margin: 0;
+  position: absolute;
+  top: 24%;
+  width: 16.7%;
+  z-index: 9999;
+}
+
+.onepage-pagination li a.active:before,
+.onepage-pagination li a:before {
+  background: none !important;
+  content: none;
+}
+
+.onepage-pagination li a {
+  font-size: 1.8em;
+  font-weight: 500;
+  height: 10%;
+  margin-right: 0%;
+  padding: 5% 0;
+  text-align: center;
+  width: 100%;
+}
+
+.onepage-pagination:hover li a {
+  color: #ffffff;
+}
+
+.onepage-pagination li a.active {
+  color: #008080;
+  font-weight: bolder;
+}
+
+.onepage-pagination li a:hover {
+  background: #c0392b;
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+
+
+
+
+
+/*content*/
+.contentHolder {
+  overflow: hidden;
+  z-index: 999999;
+}
+
+.content {
+  padding: 0;
+}
+
+.off-canvas-wrap.contentHolder {
+  overflow-y: scroll;
+}
+
+.innerWrap {
+}
+
+.innerWrap {
+  background: url(patternhead-helvetica1b-thumb.png) repeat scroll 0 0 rgba(0, 0, 0, 0);
+  bottom: 0;
+  color: #FFFFFF;
+  padding: 0 2%;
+  position: absolute;
+}
+
+.intro {
+  background: url(800_promo.jpg) repeat scroll center top transparent;
+}
+
+.summary {
+  background: url(800_celldivsion.jpg)repeat scroll center top transparent;
+}
+
+.work {
+  background: url(880_robotbbq.png) repeat scroll center -40px rgba(0, 0, 0, 0);
+}
+
+.education {
+  background: url(800_zipper.jpg) repeat scroll center top transparent;
+}
+
+.about {
+  background: url("FreeVector-Vector-Sky.jpg") repeat scroll center -300px rgba(0, 0, 0, 0);
+}
+
+
+
+
+/*1024px and lower*/
+@media screen and (max-width: 1024px) {
+
+  .onepage-pagination {
+    background: url("patternhead-helvetica1b-thumb.png") repeat scroll 0 0 #000000;
+    /*box-shadow: 0 0 10px #000000;*/
+    left: 0;
+    margin: 0 auto;
+    padding: 0;
+    position: absolute;
+    top: -230px;
+    width: 35%;
+    z-index: 9999999;
+  }
+
+  .showMenu {
+    top: 0;
+  }
+
+  .onepage-pagination li a {
+    color: #000000;
+    padding: 0;
+  }
+
+  .onepage-pagination li a.active {
+    color: #008080;
+    font-weight: bolder;
+  }
+
+  .onepage-pagination:hover li a {
+    color: #000000;
+  }
+
+  .onepage-pagination:hover li a.active {
+    color: #008080;
+  }
+
+  .onepage-pagination li a:hover {
+    color: #FFFFFF !important;
+  }
+
+  a#menu {
+    display: inline-block !important;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+  }
+
+  .rotateActive {
+    -webkit-transition: -webkit-transform 0.7s ease-in;
+    -webkit-transform: rotate(0deg);
+    -moz-transition: -moz-transform 0.7s ease-in;
+    -moz-transform: rotate(0deg);
+    -ms-transition: transform 0.7s ease-in;
+    -ms-transform: rotate(0deg);
+    transition: transform 0.7s ease-in;
+    transform: rotate(0deg);
+  }
+
+  .rotateInactive {
+    -webkit-transition: -webkit-transform 1s ease-in;
+    -webkit-transform: rotate(-180deg);
+    -moz-transition: -moz-transform 0.7s ease-in;
+    -moz-transform: rotate(-180deg);
+    -ms-transition: transform 0.7s ease-in;
+    -ms-transform: rotate(-180deg);
+    transition: transform 0.7s ease-in;
+    transform: rotate(-180deg);
+  }
+
+  a#menu img {
+    padding: 1% 0 2%;
+    width: 29px;
+  }
+
+  .contentHolder {
+    position: absolute;
+  }
+
+  .onepage-wrapper .section {
+    height: 100%;
+    width: 100%;
+    font-size: 0.7em;
+  }
+
+} /*end 1024px and lower*/
+
+
+
+
+/*1320px and lower*/
+@media screen and (max-width: 1320px) {
+  p {
+    font-size: 1.6em;
+  }
+}
+/*end 1320px and lower*/
+
+
+
+
+/*ie*/
+.ie11 .about {
+  background: url(FreeVector-Vector-Sky.jpg) repeat scroll center -280px rgba(0, 0, 0, 0);
+}
