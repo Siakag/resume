@@ -48,10 +48,9 @@ $(function()
       that = this;
       function anim()
       {
-        // $(that).parent().parent().parent().stop(true, true).toggleClass('showNav', 2000);
         if( (rotateMenuNum%2) == 0 )
         {
-          $('.nav').stop(true, true).animate({'top':'-410px'}, 1000);
+          $('.nav').stop(true, true).animate({'top':'-320px'}, 1000);
           $(that).removeClass('rotateInactive');
           $(that).addClass('rotateActive');
         }
@@ -93,3 +92,28 @@ function activeNavItem()
   var active = 'a#' + $('.main').find('section.active').data('index');
   $(active).addClass('active');
 }
+
+// function panToSection(el)
+// {
+//   $('nav li a').removeClass('active');
+//   var id = el.id;
+//   var target = 0;
+//   if(id==1)
+//   {
+//       target = 0;
+//   } else if(id==2) {
+//       target = 100;
+//   } else if(id==3) {
+//       target = 200;
+//   } else if(id==4) {
+//       target = 300;
+//   } else if(id==5) {
+//       target = 400;
+//   }
+
+//   target += '%';
+//   // var target = $(id).offset().top;
+//   $("body").stop(true, true).animate({ scrollTop: target }, 750);
+//   $(el).addClass('active');
+//   console.log(id + ' ' + target);
+// }

@@ -130,15 +130,17 @@ body,
   height: 100%;
   max-width: 100%;
 }
+/*end rules****************************/
 
 
 
 
 /*navigation*/
 .nav.hunned {
-  background: url("genius_120px.png") no-repeat scroll center 4% #FFF5DF;
-  display: table;
+  background: url("genius_120px.png") no-repeat scroll center 2% #FFF5DF;
+  height: 100%;
   padding-top: 13%;
+  /*position: fixed;*/
 }
 
 .nav.hunned ul:hover li a {
@@ -172,53 +174,6 @@ a#menu {
 
 
 
-
-/*.onepage-pagination {
-  left: 0;
-  list-style: none outside none;
-  margin: 0;
-  position: absolute;
-  top: 24%;
-  width: 16.7%;
-  z-index: 9999;
-}
-
-.onepage-pagination li a.active:before,
-.onepage-pagination li a:before {
-  background: none !important;
-  content: none;
-}
-
-.onepage-pagination li a {
-  font-size: 1.8em;
-  font-weight: 800;
-  height: 10%;
-  margin-right: 0%;
-  padding: 5% 0;
-  text-align: center;
-  width: 100%;
-}
-
-.onepage-pagination:hover li a.active,
-.onepage-pagination:hover li a {
-  color: #ffffff;
-}
-
-.onepage-pagination li a.active {
-  color: #008080;
-  text-decoration: underline;
-}
-
-.onepage-pagination li a:hover {
-  background: #c0392b;
-  color: #FFFFFF;
-  text-decoration: underline;
-}*/
-
-
-
-
-
 /*content*/
 .contentHolder {
   z-index: 999999;
@@ -233,10 +188,8 @@ a#menu {
 }
 
 .innerWrap {
-  background: url(patternhead-helvetica1b-thumb.png) repeat scroll 0 0 rgba(0, 0, 0, 0);
   bottom: 0;
   color: #FFFFFF;
-  padding: 0 2%;
   position: absolute;
 }
 
@@ -249,8 +202,10 @@ a#menu {
   text-decoration: underline;
 }
 
-.innerWrap p {
-  margin-bottom: 1.5em;
+.halfHeight p {
+  background: url(patternhead-helvetica1b-thumb.png) repeat scroll 0 0 rgba(0, 0, 0, 0);
+  margin-top: -7px;
+  padding: 0 3%;
 }
 
 .intro .bg {
@@ -280,9 +235,9 @@ a#menu {
 
 .row.footer {
   bottom: 0;
-  margin-left: 16.6%;
   max-width: 100%;
   position: fixed;
+  text-align: center;
   width: 100%;
   z-index: 99999999;
 }
@@ -292,11 +247,24 @@ a#menu {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   color: #FFFFFF;
+  display: inline-block;
   font-size: 1.1em;
   margin: 0;
   text-align: center;
   width: 50%;
 }
+
+
+
+
+/*1024px & higher*/
+@media screen and (min-width: 1025px) {
+.nav {
+  display: table !important;
+  top: 0 !important;
+}
+}
+/*end 1024px & higher****************************/
 
 
 
@@ -335,11 +303,12 @@ a#menu {
 
 /*nav*/
 .nav {
-  display: block;
-  height: 410px !important;
+  display: block !important;
+  height: 340px !important;
   margin: 0 25%;
+  padding-top: 150px !important;
   position: fixed;
-  top: -410px;
+  top: -320px;
   width: 50%;
   z-index: 999999999;
 }
@@ -348,14 +317,23 @@ a#menu {
   margin: 0 20%;
 }
 
-.nav ul li {
+nav li {
+  font-size: 1.4em;
+  line-height: 1.6em;
+  list-style: none;
+  margin-left: 0;
   text-align: center;
 }
 
 a#menu {
+  background: none repeat scroll 0 0 #000000;
   display: block;
+  left: 19px;
+  margin-left: 90%;
   padding: 2%;
+  position: relative;
   text-align: right;
+  top: -19px;
 }
 
 
@@ -365,7 +343,8 @@ a#menu {
 .section:last-child p {
   padding-bottom: 7%;
 }
-} /*end 1024px & lower*/
+}
+/*end 1024px & lower****************************/
 
 
 
