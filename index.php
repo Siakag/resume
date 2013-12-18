@@ -45,9 +45,9 @@
 
     <!-- scripts -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
     <script src="js/jquery.color.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
     <script src="js/foundation.min.js"></script>
     <script src="js/jquery.onepage-scroll.min.js"></script>
     <script src="js/app.js"></script>

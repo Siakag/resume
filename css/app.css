@@ -80,6 +80,18 @@
   border-bottom-right-radius: 8px;
 }
 
+.halfHeight {
+  height: 50%;
+}
+
+.halfHeight:nth-child(2n) {
+  margin-top: -15px;
+}
+
+.halfWidth {
+  width: 50%;
+}
+
 .hunned {
   display: block;
   height: 100%;
@@ -129,21 +141,32 @@ body,
   padding-top: 13%;
 }
 
+.nav.hunned ul:hover li a {
+  color: #FFFFFF;
+}
+
 nav ul {
     margin: 0;
 }
 
 nav li {
-  font-size: 1.7em;
+  font-size: 1.5em;
   line-height: 2.3em;
   list-style: none outside none;
-  margin-left: 5%;
-  /*text-align: center;*/
+  margin-left: 4%;
+  text-align: left;
 }
 
-
-.nav.hunned:hover a.active {
+.nav.hunned a:hover {
   text-decoration: underline;
+}
+
+.nav.hunned a.active {
+  font-weight: bolder;
+}
+
+a#menu {
+  display: none;
 }
 
 
@@ -220,31 +243,33 @@ nav li {
 .header {
   background: none repeat scroll 0 0 #C0392B;
   color: #FFFFFF;
-  padding: 1% 3%;
+  padding: 1% 15% 1% 3%;
   position: relative;
+  text-align: right;
+  text-decoration: underline;
 }
 
 .innerWrap p {
   margin-bottom: 1.5em;
 }
 
-.intro {
+.intro .bg {
   background: url(800_promo.jpg) repeat scroll left top transparent;
 }
 
-.summary {
+.summary .bg {
   background: url(800_celldivsion.jpg)repeat scroll left top transparent;
 }
 
-.work {
+.work .bg {
   background: url(880_robotbbq.png) repeat scroll left -40px rgba(0, 0, 0, 0);
 }
 
-.education {
+.education .bg {
   background: url(800_zipper.jpg) repeat scroll left top transparent;
 }
 
-.about {
+.about .bg {
   background: url("FreeVector-Vector-Sky.jpg") repeat scroll left -340px rgba(0, 0, 0, 0);
 }
 
@@ -278,171 +303,72 @@ nav li {
 
 /*1024px & lower*/
 @media screen and (max-width: 1024px) {
+/*animations*/
+.rotateActive {
+  -webkit-transition: -webkit-transform 0.7s ease-in;
+  -webkit-transform: rotate(0deg);
+  -moz-transition: -moz-transform 0.7s ease-in;
+  -moz-transform: rotate(0deg);
+  -ms-transition: transform 0.7s ease-in;
+  -ms-transform: rotate(0deg);
+  transition: transform 0.7s ease-in;
+  transform: rotate(0deg);
+}
+
+.rotateInactive {
+  -webkit-transition: -webkit-transform 1s ease-in;
+  -webkit-transform: rotate(-180deg);
+  -moz-transition: -moz-transform 0.7s ease-in;
+  -moz-transform: rotate(-180deg);
+  -ms-transition: transform 0.7s ease-in;
+  -ms-transform: rotate(-180deg);
+  transition: transform 0.7s ease-in;
+  transform: rotate(-180deg);
+}
+
+.showNav {
+  top: 0 !important;
+}
 
 
-  .nav.hunned {
-    background: url("genius_120px.png") no-repeat scroll 310px 60% #FFF5DF !important;
-    display: table;
-    height: auto;
-    margin: 0 20%;
-    padding-top: 0;
-    position: absolute;
-    top: -5px;
-    width: 60%;
-    z-index: 999999999;
-  }
-
-  .nav.hunned ul:hover a {
-    color: #FFFFFF;
-  }
 
 
-  .showMenu {
-    top: 0 !important;
-  }
+/*nav*/
+.nav {
+  display: block;
+  height: 410px !important;
+  margin: 0 25%;
+  position: fixed;
+  top: -410px;
+  width: 50%;
+  z-index: 999999999;
+}
 
-  /*  .onepage-pagination {
-    background: none repeat scroll 0 0 #009090;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-    left: 0;
-    margin: 0 auto;
-    padding: 0;
-    position: absolute;
-    top: -230px;
-    width: 45%;
-    z-index: 9999999;
-  }
-  .onepage-pagination li a {
-    color: #000000;
-    padding: 0;
-  }
+.nav ul {
+  margin: 0 20%;
+}
 
-  .onepage-pagination li a.active {
-    color: #FFFFFF;
-    font-weight: bolder;
-  }
+.nav ul li {
+  text-align: center;
+}
 
-  .onepage-pagination:hover li a {
-    color: #000000;
-  }
+a#menu {
+  display: block;
+}
 
-  .onepage-pagination:hover li a.active {
-    color: #FFFFFF;
-  }
 
-  .onepage-pagination li a:hover {
-    color: #FFFFFF !important;
-  }*/
 
-  a#menu {
-    display: inline-block !important;
-    margin: 0 auto;
-    text-align: center;
-    width: 100%;
-  }
 
-  .rotateActive {
-    -webkit-transition: -webkit-transform 0.7s ease-in;
-    -webkit-transform: rotate(0deg);
-    -moz-transition: -moz-transform 0.7s ease-in;
-    -moz-transform: rotate(0deg);
-    -ms-transition: transform 0.7s ease-in;
-    -ms-transform: rotate(0deg);
-    transition: transform 0.7s ease-in;
-    transform: rotate(0deg);
-  }
-
-  .rotateInactive {
-    -webkit-transition: -webkit-transform 1s ease-in;
-    -webkit-transform: rotate(-180deg);
-    -moz-transition: -moz-transform 0.7s ease-in;
-    -moz-transform: rotate(-180deg);
-    -ms-transition: transform 0.7s ease-in;
-    -ms-transform: rotate(-180deg);
-    transition: transform 0.7s ease-in;
-    transform: rotate(-180deg);
-  }
-
-  a#menu img {
-    padding: 2% 0 1%;
-    width: 29px;
-  }
-
-  .contentHolder {
-    overflow-y: scroll;
-    z-index: 999999;
-  }
-
-  .onepage-wrapper section {
-    font-size: 0.7em;
-    height: 100%;
-    min-height: 580px;
-    width: 100%;
-  }
-
-  .header {
-    position: relative;
-    top: 0%;
-  }
-
-  .section:last-child p {
-    padding-bottom: 7%;
-  }
-
-  .intro {
-    background: url(800_promo.jpg) repeat scroll left top transparent;
-  }
-
-  .summary {
-    background: url(800_celldivsion.jpg)repeat scroll -350px top transparent;
-  }
-
-  .work {
-    background: url(880_robotbbq.png) repeat scroll left -430% rgba(0, 0, 0, 0);
-  }
-
-  .education {
-    background: url(800_zipper.jpg) repeat scroll -340px top transparent;
-  }
-
-  .about {
-    background: url("FreeVector-Vector-Sky.jpg") repeat scroll -190px -350px rgba(0, 0, 0, 0);
-  }
-
-  .row.footer {
-    margin-left: 0;
-  }
-
-  .footer p {
-    margin: 0 auto;
-  }
-
+/*content*/
+.section:last-child p {
+  padding-bottom: 7%;
+}
 } /*end 1024px & lower*/
-
-
-
-
-/*1320px & lower*/
-@media screen and (max-width: 1320px) {
-  p {
-    font-size: 1.6em;
-    font-weight: 600;
-  }
-}
-/*end 1320px & lower*/
-
-
-
-
-/*1024 & higher*/
-@media screen and (min-width: 1024px) {
-}
 
 
 
 
 /*ie*/
 .ie11 .about {
-  background: url(FreeVector-Vector-Sky.jpg) repeat scroll center -280px rgba(0, 0, 0, 0);
+background: url(FreeVector-Vector-Sky.jpg) repeat scroll center -280px rgba(0, 0, 0, 0);
 }
