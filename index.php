@@ -43,7 +43,7 @@
     </div> <!-- end footer -->
 
 
-    <!-- JavaScripts -->
+    <!-- scripts -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="js/jquery.color.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
