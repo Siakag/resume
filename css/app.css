@@ -354,6 +354,8 @@ a#menu {
 
 a#menu {
   display: block;
+  padding: 2%;
+  text-align: center;
 }
 
 
