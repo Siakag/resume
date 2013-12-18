@@ -1,13 +1,18 @@
 <div class="main hunned">
 
   <section class="content table hunned intro" id='#1'>
-    <div class="alignBottom center innerWrap">
+    <div class="half center innerWrap">
+
+    </div>
+
+    <div class="half center innerWrap">
       <h2 class='header'></h2>
       <p class=''>
         At i.do.web&trade;, we strive to build secure bonds with our clients, all while providing them with the tools and power necessary to expand and reach out to the world more effectively. Our number 1 goal is to create elegant, content-rich, and SEO compliant websites that bring you closer to your clients.
       </p>
     </div>
   </section>
+
 
   <section class="content table hunned summary" id='#2'>
     <div class="center innerWrap">
@@ -18,6 +23,7 @@
     </div>
   </section>
 
+
   <section class="content table hunned work" id='#3'>
     <div class="center innerWrap">
       <h2 class='header'></h2>
@@ -27,6 +33,7 @@
     </div>
   </section>
 
+
   <section class="content table hunned education" id='#4'>
     <div class="center innerWrap">
       <h2 class='header'></h2>
@@ -35,6 +42,7 @@
       </p>
     </div>
   </section>
+
 
   <section class="content table hunned about" id='#5'>
     <div class="center innerWrap">
