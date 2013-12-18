@@ -63,6 +63,11 @@ $(function()
       }
       return anim();
     });
+
+  $('nav ul a').click(function()
+    {
+      panToSection(this);
+    });
   // end nav funcs
 
 
@@ -93,27 +98,27 @@ function activeNavItem()
   $(active).addClass('active');
 }
 
-// function panToSection(el)
-// {
-//   $('nav li a').removeClass('active');
-//   var id = el.id;
-//   var target = 0;
-//   if(id==1)
-//   {
-//       target = 0;
-//   } else if(id==2) {
-//       target = 100;
-//   } else if(id==3) {
-//       target = 200;
-//   } else if(id==4) {
-//       target = 300;
-//   } else if(id==5) {
-//       target = 400;
-//   }
+function panToSection(el)
+{
+  $('nav li a').removeClass('active');
+  var id = el.id;
+  var target = 0;
+  if(id==1)
+  {
+      target = 0;
+  } else if(id==2) {
+      target = 100;
+  } else if(id==3) {
+      target = 200;
+  } else if(id==4) {
+      target = 300;
+  } else if(id==5) {
+      target = 400;
+  }
 
-//   target += '%';
-//   // var target = $(id).offset().top;
-//   $("body").stop(true, true).animate({ scrollTop: target }, 750);
-//   $(el).addClass('active');
-//   console.log(id + ' ' + target);
-// }
+  target += '%';
+  // var target = $(id).offset().top;
+  $("body").stop(true, true).animate({ scrollTop: target }, 750);
+  $(el).addClass('active');
+  console.log(id + ' ' + target);
+}

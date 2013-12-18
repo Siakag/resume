@@ -303,13 +303,14 @@ a#menu {
 
 /*nav*/
 .nav {
+  background-color: #FFF5DF !important;
   display: block !important;
   height: 340px !important;
-  margin: 0 25%;
+  margin: 0 15%;
   padding-top: 150px !important;
   position: fixed;
   top: -320px;
-  width: 50%;
+  width: 70%;
   z-index: 999999999;
 }
 
@@ -325,14 +326,19 @@ nav li {
   text-align: center;
 }
 
+nav li a {
+  color: #2C3E50 !important;
+}
+
 a#menu {
   background: none repeat scroll 0 0 #000000;
   display: block;
   left: 19px;
   margin-left: 90%;
+  min-width: 15%;
   padding: 2%;
   position: relative;
-  text-align: right;
+  text-align: center;
   top: -19px;
 }
 
