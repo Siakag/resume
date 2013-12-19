@@ -15,16 +15,13 @@
     <link rel="shortcut icon" href="css/favicon.ico" type="image/x-icon">
     <link rel="icon" href="css/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/foundation.css" />
-    <link rel="stylesheet" href="css/onepage-scroll.css" />
+    <link rel="stylesheet" href="css/jquery.fullPage.css" />
     <link rel="stylesheet" href="css/app.css" />
     <script src="js/modernizr.js"></script>
   </head>
   <body>
     <div class="row mainRow clear">
       <div class="nav hunned small-12 large-2 left">
-        <?php
-          include 'includes/navContent.php'
-        ?>
       </div> <!-- end .nav -->
 
 
@@ -49,7 +46,7 @@
     <script src="js/jquery.color.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <script src="js/foundation.min.js"></script>
-    <script src="js/jquery.onepage-scroll.min.js"></script>
+    <script src="js/jquery.fullPage.js"></script>
     <script src="js/app.js"></script>
 
   </body>

@@ -1,28 +1,30 @@
 $(document).foundation();
 $(function()
 {
-  // onpage_scroll
-  // $(".main").onepage_scroll({
-  //  sectionContainer: "section", // sectionContainer accepts any kind of selector in case you don't want to use section
-  //  easing: "ease", // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in", "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
-  //  animationTime: 750, // AnimationTime let you define how long each section takes to animate
-  //  pagination: false, // You can either show or hide the pagination. Toggle true for show, false for hide.
-  //  updateURL: false, // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
-  //  beforeMove: function(index) {}, // This option accepts a callback function. The function will be called before the page moves.
-  //  afterMove: function(index) {
-  //   activeNavItem();
-  //  }, // This option accepts a callback function. The function will be called after the page moves.
-  //  loop: true, // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
-  //  responsiveFallback: false // You can fallback to normal page scroll by defining the width of the browser in which you want the responsive fallback to be triggered. For example, set this to 600 and whenever the browser's width is less than 600, the fallback will kick in.
-  // });
-  // end onpage_scroll
-
-
-  // $(window).resize(function()
-  //   {
-  //   console.log($(this).width());
-  //   }
-  // );
+  $.fn.fullpage({
+    verticalCentered: false,
+    resize : false,
+    slidesColor : ['#ccc', '#fff'],
+    anchors:['what.we.do', 'beauty', 'seo.&.analytics', 'rates', 'contact.us'],
+    scrollingSpeed: 550,
+    easing: 'linear',
+    menu: true,
+    navigation: true,
+    navigationPosition: 'left',
+    navigationTooltips: [],
+    slidesNavigation: true,
+    slidesNavPosition: 'bottom',
+    loopBottom: true,
+    loopTop: true,
+    loopHorizontal: false,
+    autoScrolling: true,
+    scrollOverflow: false,
+    css3: false,
+    paddingTop: '0em',
+    paddingBottom: '0px',
+    fixedElements: '#element1, .element2',
+    normalScrollElements: '#element1, .element2'
+  });
 
 
   (function(){
@@ -42,7 +44,7 @@ $(function()
   })();
 
   // nav funcs
-  var navItems = $('nav ul');
+  var navItems = $('#fullPage-nav ul');
   navItems.hover(function()
     {
       $('.nav').stop(true, true).animate({ backgroundColor: "#000000" }, "slow");
@@ -54,7 +56,8 @@ $(function()
   );
 
   var img = "<a class='' href='#' id='menu'><img src='css/arrow-down.png' alt=''></a>";
-  $('nav').append(img);
+  // $('#fullPage-nav').append(img);
+  $('body').append(img);
 
   var rotateMenuNum = 0;
   $('a#menu img').click(function()
@@ -65,13 +68,13 @@ $(function()
       {
         if( (rotateMenuNum%2) == 0 )
         {
-          $('.nav').stop(true, true).animate({'top':'-320px'}, 1000);
+          $('#fullPage-nav').stop(true, true).animate({'top':'-145px'}, 1000);
           $(that).removeClass('rotateInactive');
           $(that).addClass('rotateActive');
         }
         else
         {
-          $('.nav').animate({'top':'0px'}, 1000);
+          $('#fullPage-nav').stop(true, true).animate({'top':'130px'}, 1000);
           $(that).addClass('rotateInactive');
           $(that).removeClass('rotateActive');
         }
@@ -85,12 +88,7 @@ $(function()
   {
     var pages = ['what.we.do', 'beauty', 'seo.&.analytics', 'rates', 'contact.us'];
 
-    $('nav li a').each(function(index)
-    {
-      $(this).text(pages[index]);
-    });
-
-      $('h2.header').each(function(index)
+    $('#fullPage-nav li a').each(function(index)
     {
       $(this).text(pages[index]);
     });

@@ -114,7 +114,7 @@ h2 {
 
 p {
   color: #000;
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 
 body {
@@ -144,27 +144,36 @@ body,
   position: fixed;
 }
 
-.nav.hunned ul:hover li a {
+#fullPage-nav {
+  left: 0 !important;
+  position: relative;
+  top: -30%;
+  width: 16.7%;
+}
+
+#fullPage-nav ul:hover li a {
   color: #FFFFFF;
 }
 
-nav ul {
+#fullPage-nav ul {
     margin: 0;
 }
 
-nav li {
+#fullPage-nav li {
   font-size: 1.5em;
+  height: 40px;
   line-height: 2.3em;
   list-style: none outside none;
   margin-left: 4%;
   text-align: left;
 }
 
-.nav.hunned a:hover {
+#fullPage-nav a:hover {
+  font-weight: bolder;
   text-decoration: underline;
 }
 
-.nav.hunned a.active {
+#fullPage-nav a.active {
   font-weight: bolder;
 }
 
@@ -204,10 +213,23 @@ a#menu {
   text-decoration: underline;
 }
 
-.halfHeight p {
+/*.halfHeight p {
   background: url(patternhead-helvetica1b-thumb.png) repeat scroll 0 0 rgba(0, 0, 0, 0);
   margin-top: -7px;
-  padding: 0 3%;
+  padding: 2%;
+  font-weight: bolder;
+}*/
+
+.halfHeight p {
+  background: url("patternhead-helvetica1b-thumb.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+  display: table;
+  font-weight: bolder;
+  margin-top: -45px;
+  padding: 0 2%;
+}
+
+.halfHeight p span {
+  color: #000000;
 }
 
 .intro .bg {
@@ -296,52 +318,60 @@ a#menu {
   transform: rotate(-180deg);
 }
 
-.showNav {
-  top: 0 !important;
+
+
+
+/*general*/
+p {
+  font-size: 1.2em;
 }
 
 
 
 
 /*nav*/
-.nav {
+#fullPage-nav {
   background-color: #FFF5DF !important;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
   display: block !important;
-  height: 340px !important;
-  margin: 0 15%;
-  padding-top: 150px !important;
+  height: 315px !important;
+  margin: -155px 15% 0 !important;
+  padding-top: 0;
   position: fixed;
-  top: -320px;
+  top: -145px;
   width: 70%;
-  z-index: 999999999;
+  z-index: 99999999;
 }
 
-.nav ul {
-  margin: 0 20%;
+#fullPage-nav ul {
+  margin: 0;
+  padding-top: 65px;
 }
 
-nav li {
+#fullPage-nav li {
   font-size: 1.4em;
   line-height: 1.6em;
-  list-style: none;
+  list-style: none outside none;
   margin-left: 0;
   text-align: center;
+  width: 100%;
 }
 
-nav li a {
+#fullPage-nav li a {
   color: #2C3E50 !important;
 }
 
 a#menu {
-  background: none repeat scroll 0 0 #000000;
   display: block;
-  left: 19px;
-  margin-left: 90%;
-  min-width: 15%;
-  padding: 2%;
-  position: relative;
+  left: 0;
+  min-width: 5%;
+  padding: 0;
+  position: absolute;
   text-align: center;
-  top: -19px;
+  top: 0;
+  width: 100%;
+  z-index: 2147483647;
 }
 
 
