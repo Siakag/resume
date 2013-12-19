@@ -1,6 +1,6 @@
 <div class="main hunned">
 
-  <section class="content table hunned intro" id='section1'>
+  <section class="content hunned intro" id='section1'>
     <div class="halfHeight bg">
 
     </div>
@@ -14,7 +14,7 @@
   </section>
 
 
-  <section class="content table hunned summary" id='section2'>
+  <section class="content hunned summary" id='section2'>
     <div class="halfHeight bg">
 
     </div>
@@ -28,7 +28,7 @@
   </section>
 
 
-  <section class="content table hunned work" id='section3'>
+  <section class="content hunned work" id='section3'>
     <div class="halfHeight bg">
 
     </div>
@@ -42,7 +42,7 @@
   </section>
 
 
-  <section class="content table hunned education" id='section4'>
+  <section class="content hunned education" id='section4'>
     <div class="halfHeight bg">
 
     </div>
@@ -56,7 +56,7 @@
   </section>
 
 
-  <section class="content table hunned about" id='section5'>
+  <section class="content hunned about" id='section5'>
     <div class="halfHeight bg">
 
     </div>

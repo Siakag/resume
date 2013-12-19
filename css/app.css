@@ -138,9 +138,10 @@ body,
 /*navigation*/
 .nav.hunned {
   background: url("genius_120px.png") no-repeat scroll center 2% #FFF5DF;
+  display: block !important;
   height: 100%;
   padding-top: 13%;
-  /*position: fixed;*/
+  position: fixed;
 }
 
 .nav.hunned ul:hover li a {
@@ -176,6 +177,7 @@ a#menu {
 
 /*content*/
 .contentHolder {
+  /*overflow-y: scroll;*/
   z-index: 999999;
 }
 

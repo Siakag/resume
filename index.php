@@ -28,7 +28,7 @@
       </div> <!-- end .nav -->
 
 
-      <div class="contentHolder small-12 large-10 left">
+      <div class="contentHolder small-12 large-10 large-push-2 left">
         <?php
           include 'includes/content.php'
         ?>
@@ -45,7 +45,7 @@
 
     <!-- scripts -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
     <script src="js/jquery.color.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <script src="js/foundation.min.js"></script>

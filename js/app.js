@@ -1,21 +1,20 @@
 $(document).foundation();
 $(function()
 {
-
   // onpage_scroll
-  $(".main").onepage_scroll({
-   sectionContainer: "section", // sectionContainer accepts any kind of selector in case you don't want to use section
-   easing: "ease", // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in", "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
-   animationTime: 750, // AnimationTime let you define how long each section takes to animate
-   pagination: false, // You can either show or hide the pagination. Toggle true for show, false for hide.
-   updateURL: false, // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
-   beforeMove: function(index) {}, // This option accepts a callback function. The function will be called before the page moves.
-   afterMove: function(index) {
-    activeNavItem();
-   }, // This option accepts a callback function. The function will be called after the page moves.
-   loop: true, // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
-   responsiveFallback: false // You can fallback to normal page scroll by defining the width of the browser in which you want the responsive fallback to be triggered. For example, set this to 600 and whenever the browser's width is less than 600, the fallback will kick in.
-  });
+  // $(".main").onepage_scroll({
+  //  sectionContainer: "section", // sectionContainer accepts any kind of selector in case you don't want to use section
+  //  easing: "ease", // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in", "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
+  //  animationTime: 750, // AnimationTime let you define how long each section takes to animate
+  //  pagination: false, // You can either show or hide the pagination. Toggle true for show, false for hide.
+  //  updateURL: false, // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
+  //  beforeMove: function(index) {}, // This option accepts a callback function. The function will be called before the page moves.
+  //  afterMove: function(index) {
+  //   activeNavItem();
+  //  }, // This option accepts a callback function. The function will be called after the page moves.
+  //  loop: true, // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
+  //  responsiveFallback: false // You can fallback to normal page scroll by defining the width of the browser in which you want the responsive fallback to be triggered. For example, set this to 600 and whenever the browser's width is less than 600, the fallback will kick in.
+  // });
   // end onpage_scroll
 
 
@@ -25,6 +24,22 @@ $(function()
   //   }
   // );
 
+
+  (function(){
+    var currentScroll = 0;
+    $('.contentHolder').scroll(function(event){
+        var st = $(this).scrollTop();
+        if (st > currentScroll){
+          var s = st+(st/100);
+          $('html, body').animate({scrollTop: s});
+          console.log(s);
+        }
+        else {
+          // $(window).animate({scrollTop: st+100});
+        }
+        currentScroll = st;
+    });
+  })();
 
   // nav funcs
   var navItems = $('nav ul');
@@ -64,12 +79,6 @@ $(function()
       return anim();
     });
 
-  $('nav ul a').click(function()
-    {
-      panToSection(this);
-    });
-  // end nav funcs
-
 
   // add dynamic content to nav and h2s
   (function()
@@ -87,8 +96,17 @@ $(function()
     });
   })();
   // end dynamic content
+})
 
-
+$(window).load(function(){
+  $('nav ul a').click(function(event)
+  {
+    var id = '#section' + this.id;
+    // var target = $(id).offset().top;
+    var target = $(id).position().top;
+    panToSection(this, target);
+    // event.preventDefault();
+  })
 })
 
 function activeNavItem()
@@ -98,27 +116,10 @@ function activeNavItem()
   $(active).addClass('active');
 }
 
-function panToSection(el)
+function panToSection(el, target)
 {
   $('nav li a').removeClass('active');
-  var id = el.id;
-  var target = 0;
-  if(id==1)
-  {
-      target = 0;
-  } else if(id==2) {
-      target = 100;
-  } else if(id==3) {
-      target = 200;
-  } else if(id==4) {
-      target = 300;
-  } else if(id==5) {
-      target = 400;
-  }
-
-  target += '%';
-  // var target = $(id).offset().top;
-  $("body").stop(true, true).animate({ scrollTop: target }, 750);
+  $("html, body").animate({ scrollTop: target }, 1000);
   $(el).addClass('active');
-  console.log(id + ' ' + target);
+  console.log(target);
 }
