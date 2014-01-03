@@ -21,7 +21,7 @@ $(function()
     scrollOverflow: false,
     css3: false,
     paddingTop: '0em',
-    paddingBottom: '1em',
+    paddingBottom: '0em',
     fixedElements: '#element1, .element2',
     normalScrollElements: '#element1, .element2'
   });
@@ -51,7 +51,7 @@ $(function()
     },
     function()
     {
-      $('.nav').stop(true, true).animate({ backgroundColor: "#FFF5DF"}, 'slow');
+      $('.nav').stop(true, true).animate({ backgroundColor: "#FFFFFF"}, 'slow');
     }
   );
 

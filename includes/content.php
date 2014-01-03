@@ -4,7 +4,9 @@
     <h2 class='header'>what.we.do</h2>
     <p class='hunned'>
       <span class='middle center tableCell'>
-        At i.do.web&trade;, we strive to build secure bonds with our clients, all while providing them with the tools and power necessary to expand and reach out to the world more effectively. Our number 1 goal is to create elegant, content-rich, and SEO compliant websites that bring you closer to your clients.
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril.
+
+        <!-- At i.do.web&trade;, we strive to build secure bonds with our clients, all while providing them with the tools and power necessary to expand and reach out to the world more effectively. Our number 1 goal is to create elegant, content-rich, and SEO compliant websites that bring you closer to your clients. -->
       </span>
     </p>
   </div>
@@ -17,7 +19,9 @@
     <h2 class='header'>beauty</h2>
     <p class='hunned'>
       <span class='middle center tableCell'>
-        Today's web is driven by beautifully crafted sites at blistering speeds. We specialize in developing all types of web content solutions, be it simple or robust. We pledge to deliver aesthetically satisfying websites that don't ever compromise content or functionality.
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Evel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril.
+
+<!--         Today's web is driven by beautifully crafted sites at blistering speeds. We specialize in developing all types of web content solutions, be it simple or robust. We pledge to deliver aesthetically satisfying websites that don't ever compromise content or functionality. -->
       </span>
     </p>
   </div>
@@ -30,7 +34,7 @@
     <h2 class='header'>seo.&amp;.analytics</h2>
     <p class='hunned'>
       <span class='middle center tableCell'>
-        Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit.
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Evel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril.
       </span>
     </p>
   </div>
@@ -43,7 +47,7 @@
     <h2 class='header'>rates</h2>
     <p class='hunned'>
       <span class='middle center tableCell'>
-        Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit.
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril.
       </span>
     </p>
   </div>
@@ -56,7 +60,7 @@
     <h2 class='header'>contact.us</h2>
     <p class='hunned'>
       <span class='middle center tableCell'>
-        Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit.
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril.
       </span>
     </p>
   </div>
