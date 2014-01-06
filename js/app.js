@@ -1,123 +1,115 @@
 $(document).foundation();
 $(function()
 {
-  $.fn.fullpage({
-    verticalCentered: false,
-    resize : false,
-    slidesColor : ['#ccc', '#fff'],
-    anchors:['what.we.do', 'beauty', 'seo.&.analytics', 'rates', 'contact.us'],
-    scrollingSpeed: 350,
-    easing: 'linear',
-    menu: true,
-    navigation: true,
-    navigationPosition: 'left',
-    navigationTooltips: [],
-    slidesNavigation: true,
-    slidesNavPosition: 'bottom',
-    loopBottom: false,
-    loopTop: false,
-    loopHorizontal: false,
-    autoScrolling: true,
-    scrollOverflow: false,
-    css3: false,
-    paddingTop: '0em',
-    paddingBottom: '0em',
-    fixedElements: '#element1, .element2',
-    normalScrollElements: '#element1, .element2'
-  });
 
-
-  (function(){
-    var currentScroll = 0;
-    $('.contentHolder').scroll(function(event){
-        var st = $(this).scrollTop();
-        if (st > currentScroll){
-          var s = st+(st/100);
-          $('html, body').animate({scrollTop: s});
-          console.log(s);
-        }
-        else {
-          // $(window).animate({scrollTop: st+100});
-        }
-        currentScroll = st;
-    });
-  })();
-
-  // nav funcs
-  var navItems = $('#fullPage-nav ul');
+  // nav color transitions
+  var navItems = $('.nav .hoverNavLarge');
   navItems.hover(function()
     {
-      $('.nav').stop(true, true).animate({ backgroundColor: "#000000" }, "slow");
+      $(this).stop(true, true).animate({ backgroundColor: "#000000" }, "slow");
     },
     function()
     {
-      $('.nav').stop(true, true).animate({ backgroundColor: "#FFFFFF"}, 'slow');
+      $(this).stop(true, true).animate({ backgroundColor: "#FFFFFF"}, 'slow');
     }
-  );
+  )
 
-  var img = "<a class='' href='#' id='menu'><img src='css/arrow-down.png' alt=''></a>";
-  // $('#fullPage-nav').append(img);
-  $('body').append(img);
 
-  var rotateMenuNum = 0;
-  $('a#menu img').click(function()
+  // use function with closures to return handler object when invoked
+  function navHandler()
+  {
+    // initialize properties
+    var sections = ['.section.intro', '.section.summary', '.section.work', '.section.education', '.section.about'],
+        count = 0,
+        activePosistion = sections[count],
+        animationTime = 800;
+
+    function makeMovesTo(toElement)
     {
-      rotateMenuNum+=1;
-      that = this;
-      function anim()
+      $('html, body').stop(true, true).animate({ scrollTop : toElement.position().top }, animationTime, function()
+        {
+          console.log('animation done!');
+        });
+    }
+
+    return {
+      gotoNext : function()
       {
-        if( (rotateMenuNum%2) == 0 )
-        {
-          $('#fullPage-nav').stop(true, true).animate({'top':'-145px'}, 1000);
-          $(that).removeClass('rotateInactive');
-          $(that).addClass('rotateActive');
-        }
-        else
-        {
-          $('#fullPage-nav').stop(true, true).animate({'top':'130px'}, 1000);
-          $(that).addClass('rotateInactive');
-          $(that).removeClass('rotateActive');
-        }
+        count = ( $(activePosistion).next().length ) ? count+=1 : 0;
+        activePosistion = sections[count];
+        makeMovesTo( $(activePosistion) );
+      },
+      goToPrev : function()
+      {
+        count = $(activePosistion).prev().length ? count-=1 : 4;
+        activePosistion = sections[count];
+        makeMovesTo( $(activePosistion) );
+      },
+      goToSelected : function(selected)
+      {
+        makeMovesTo( $(selected) );
+      },
+      setCount : function(num)
+      {
+        count = num;
+        activePosistion = sections[count];
       }
-      return anim();
-    });
+    }
+  }
 
-
-  // add dynamic content to nav and h2s
-  (function()
+  var navHandleObj = navHandler();
+  $('a.menu').click(function(event)
   {
-    var pages = ['what.we.do', 'beauty', 'seo.&.analytics', 'rates', 'contact.us'];
-
-    $('#fullPage-nav li a').each(function(index)
-    {
-      $(this).text(pages[index]);
-    });
-  })();
-  // end dynamic content
-})
-
-$(window).load(function(){
-  $('nav ul a').click(function(event)
-  {
-    var id = '#section' + this.id;
-    // var target = $(id).offset().top;
-    var target = $(id).position().top;
-    panToSection(this, target);
-    // event.preventDefault();
+    event.preventDefault();
+    $id = $(this).attr('id');
+    func = $id == 'down' ? navHandleObj.gotoNext() : navHandleObj.goToPrev();
+    func;
   })
+
+  $('.navElements').hover(function()
+  {
+    $('.hoverNav').stop(true, true).fadeIn(300);
+  },
+  function()
+  {
+    $('.hoverNav').stop(true, true).fadeOut(300);
+  })
+
+  $('.threedotmenu').click(function(event)
+  {
+    event.preventDefault();
+  })
+
+  $('.hoverNav li a, .hoverNavLarge li a').click(function(event)
+  {
+    event.preventDefault();
+    var mapTo = '.content.' + $(this).data('map');
+    navHandleObj.setCount( $(this).data('index') );
+    navHandleObj.goToSelected( mapTo );
+  })
+  // end navHandler functions
+
+  // detect mobile vs desktop
+  var isMobile = {
+      Android: function() {
+          return navigator.userAgent.match(/Android/i);
+      },
+      BlackBerry: function() {
+          return navigator.userAgent.match(/BlackBerry/i);
+      },
+      iOS: function() {
+          return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+      },
+      Opera: function() {
+          return navigator.userAgent.match(/Opera Mini/i);
+      },
+      Windows: function() {
+          return navigator.userAgent.match(/IEMobile/i);
+      },
+      any: function() {
+          return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+      }
+  };
+
 })
 
-function activeNavItem()
-{
-  $('nav li a').removeClass('active');
-  var active = 'a#' + $('.main').find('section.active').data('index');
-  $(active).addClass('active');
-}
-
-function panToSection(el, target)
-{
-  $('nav li a').removeClass('active');
-  $("html, body").animate({ scrollTop: target }, 1000);
-  $(el).addClass('active');
-  console.log(target);
-}

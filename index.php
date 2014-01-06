@@ -5,49 +5,44 @@
 <!--[if IE 9]> <html class="lt-ie11 lt-ie10 ie9"> <![endif]-->
 <!--[if IE 10]> <html class="lt-ie11 ie10"> <![endif]-->
 <!--[if IE]> <html class="ie11"> <![endif]-->
-<!--[if gte IE 11]> ><! <![endif]-->
 <html class="no-js" lang="en">
-<!-- <![endif] -->
+
   <head>
+    <title>Siaka G. :::: i.do.web</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Siaka G. :::: i.do.web</title>
+    <meta name="description" content="I Do Web offers truly beautiful web design and development to help you push your business forward.">
+    <meta name="keywords" content="i do web, siaka g, web design and development consulting">
     <link rel="shortcut icon" href="css/favicon.ico" type="image/x-icon">
     <link rel="icon" href="css/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/foundation.css" />
-    <link rel="stylesheet" href="css/jquery.fullPage.css" />
     <link rel="stylesheet" href="css/app.css" />
-    <script src="js/modernizr.js"></script>
   </head>
+
   <body>
-    <div class="row mainRow clear">
-      <div class="nav hunned small-12 large-2 left">
+    <a href="" class="show-for-small menu hide-text" id="down">down</a>
+    <a href="" class="show-for-small menu hide-text" id="up">up</a>
+
+<?php include 'includes/navContentSmall.php'; ?>
+
+    <div class="row mainRow">
+      <div class="small-12 large-2 columns nav"> large
+<?php include 'includes/navContentLarge.php'; ?>
       </div> <!-- end .nav -->
 
-
-      <div class="contentHolder small-12 large-10 large-push-2 left">
-        <?php
-          include 'includes/content.php'
-        ?>
+      <div class="small-12 large-10 columns" id='contentHolder'>
+<?php include 'includes/content.php'; ?>
       </div> <!-- end contentHolder -->
+
+      <div class="row footer">
+<?php // include 'includes/footer.php' ?>
+      </div> <!-- end footer -->
+
     </div> <!-- end mainRow -->
 
-
-    <div class="row footer">
-      <?php
-        include 'includes/footer.php'
-      ?>
-    </div> <!-- end footer -->
-
-
-    <!-- scripts -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
-    <script src="js/jquery.color.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="js/foundation.min.js"></script>
-    <script src="js/jquery.fullPage.js"></script>
-    <script src="js/app.js"></script>
-
   </body>
+
+<?php include 'includes/js.html'; ?>
+
 </html>
