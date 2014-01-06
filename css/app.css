@@ -238,6 +238,7 @@ a.menu {
   height: 30px;
   left: 50%;
   position: fixed;
+  visibility: hidden;
   width: 30px;
   z-index: 9;
 }
@@ -252,7 +253,7 @@ a.menu#up {
 }
 
 .leftForMobile {
-  left: 45%;
+  left: 46% !important;
 }
 
 a#sections.threedotmenu {

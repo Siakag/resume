@@ -94,6 +94,7 @@ $(function()
 
 $(window).on('load', function()
 {
+
   // detect mobile vs desktop
   if (Modernizr.touch) {
 
@@ -109,4 +110,6 @@ $(window).on('load', function()
       $('.hoverNav').stop(true, true).fadeOut(200);
     })
   }
+
+  $('a.menu').css({ 'visibility' : 'visible' });
 })
