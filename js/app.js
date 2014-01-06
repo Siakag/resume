@@ -2,7 +2,7 @@ $(document).foundation();
 $(function()
 {
 
-  // nav color transitions
+  // nav bg color transitions
   var navItems = $('.nav .hoverNavLarge');
   navItems.hover(function()
     {
@@ -15,7 +15,7 @@ $(function()
   )
 
 
-  // use function with closures to return handler object when invoked
+  // function using closures to return handler object when invoked
   function navHandler()
   {
     // initialize properties
@@ -32,6 +32,7 @@ $(function()
         });
     }
 
+    // return object
     return {
       gotoNext : function()
       {
@@ -57,6 +58,7 @@ $(function()
     }
   }
 
+  // DOM functions
   var navHandleObj = navHandler();
   $('a.menu').click(function(event)
   {
@@ -87,29 +89,24 @@ $(function()
     navHandleObj.setCount( $(this).data('index') );
     navHandleObj.goToSelected( mapTo );
   })
-  // end navHandler functions
-
-  // detect mobile vs desktop
-  var isMobile = {
-      Android: function() {
-          return navigator.userAgent.match(/Android/i);
-      },
-      BlackBerry: function() {
-          return navigator.userAgent.match(/BlackBerry/i);
-      },
-      iOS: function() {
-          return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-      },
-      Opera: function() {
-          return navigator.userAgent.match(/Opera Mini/i);
-      },
-      Windows: function() {
-          return navigator.userAgent.match(/IEMobile/i);
-      },
-      any: function() {
-          return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-      }
-  };
 
 })
 
+$(window).on('load', function()
+{
+  // detect mobile vs desktop
+  if (Modernizr.touch) {
+
+    $('a.menu').addClass('leftForMobile');
+
+    $('.threedotmenu').click(function(event)
+    {
+      $('.hoverNav').stop(true, true).fadeIn(300);
+    })
+
+    $('.hoverNav a').click(function(event)
+    {
+      $('.hoverNav').stop(true, true).fadeOut(200);
+    })
+  }
+})

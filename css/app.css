@@ -1,17 +1,12 @@
-rules*/
+/******************** rules ********************/
 @font-face {
-  font-family: League;
+  font-family: Raleway;
   src: url('fonts/RalewayThin.otf');
 }
 
 @font-face {
-  font-family: Adec;
-  src: url('fonts/ss_adec.otf');
-}
-
-@font-face {
-  font-family: Market;
-  src: url('fonts/circula_medium.otf');
+  font-family: Ambrosia;
+  src: url('fonts/ambrosia.ttf');
 }
 
 .absolute {
@@ -99,7 +94,7 @@ rules*/
 }
 
 .hide-text {
-  text-indent: 100%;
+  text-indent: 120%;
   white-space: nowrap;
   overflow: hidden;
 }
@@ -107,10 +102,11 @@ rules*/
 *, h1, h2, h3, h4, h5, h6 {
   color: #fff;
   outline: none !important;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
 }
 
 h2 {
-  font-family: "League";
+  font-family: "Raleway";
   font-size: 3em;
   font-weight: 900;
   margin: 0%;
@@ -126,7 +122,7 @@ body, html {
 }
 
 body {
-  font-family: "League";
+  font-family: "Ambrosia";
   text-transform: lowercase;
 }
 
@@ -137,15 +133,9 @@ body,
 .centered {
   max-width: 100%;
 }
-/*end rules****************************/
 
 
-
-
-
-
-
-/*content*/
+/******************** content ********************/
 .contentHolder {
   z-index: 999999;
 }
@@ -167,7 +157,7 @@ body,
 .header {
   background: none repeat scroll 0 0 #90392B;
   color: #FFFFFF;
-  font-family: "Market";
+  font-family: "Ambrosia";
   height: 68px;
   line-height: 3.5rem;
   padding: 0 2%;
@@ -177,66 +167,40 @@ body,
 }
 
 .halfHeight p {
-  background: url(patternhead-helvetica1b-thumb.png) repeat scroll 0 0 rgba(0, 0, 0, 0);
-  font-weight: 800;
+  background: url(img/patternhead-helvetica1b-thumb.png) repeat scroll 0 0 rgba(0, 0, 0, 0);
+  font-weight: 500;
   margin: 0;
   padding: 90px 6% 30px;
   text-align: justify;
 }
 
 .intro .bg {
-  background: url(800_promo.jpg) repeat scroll left top transparent;
+  background: url(img/800_promo.jpg) repeat scroll left top transparent;
 }
 
 .summary .bg {
-  background: url(800_celldivsion.jpg)repeat scroll left top transparent;
+  background: url(img/800_celldivsion.jpg)repeat scroll left top transparent;
 }
 
 .work .bg {
-  background: url(880_robotbbq.png) repeat scroll left -40px rgba(0, 0, 0, 0);
+  background: url(img/880_robotbbq.png) repeat scroll left -40px rgba(0, 0, 0, 0);
 }
 
 .education .bg {
-  background: url(800_zipper.jpg) repeat scroll left top transparent;
+  background: url(img/800_zipper.jpg) repeat scroll left top transparent;
 }
 
 .about .bg {
-  background: url("FreeVector-Vector-Sky.jpg") repeat scroll left -340px rgba(0, 0, 0, 0);
+  background: url(img/FreeVector-Vector-Sky.jpg) repeat scroll left -340px rgba(0, 0, 0, 0);
 }
 
 
 
-
-/*footer*/
-
-.row.footer {
-  bottom: 0;
-  max-width: 100%;
-  padding-left: 16.7%;
-  position: fixed;
-  text-align: center;
-  width: 100%;
-  z-index: 99999999;
-}
-
-.footer p {
-  background: none repeat scroll 0 0 #90392B;
-  /*border-top-left-radius: 8px;*/
-  /*border-top-right-radius: 8px;*/
-  color: #FFFFFF;
-  display: inline-block;
-  font-size: 1.1em;
-  margin: 0;
-  text-align: center;
-  width: 100%;
-}
-
-
-
-
-/*1024px & higher*/
+/******************** 1024px & higher ********************************************/
 @media screen and (min-width: 1025px) {
+/******************** navigation ********************/
 .hoverNavLarge {
+  background: url(img/genius.png) repeat scroll center center transparent;
   display: block !important;
   font-size: 1.7rem;
   height: 100%;
@@ -250,47 +214,26 @@ body,
 
 .hoverNavLarge:hover a {
   color: #FFFFFF;
+  text-decoration: underline;
+}
+
+/******************** content ********************/
+.halfHeight p {
+    padding: 90px 3% 30px;
 }
 
 }
-/*end 1024px & higher****************************/
 
 
-
-
-/******************** 1024px & lower ********************/
+/******************** 1024px & lower ********************************************/
 @media screen and (max-width: 1024px) {
-/*animations*/
-.rotateActive {
-  -webkit-transition: -webkit-transform 0.7s ease-in;
-  -webkit-transform: rotate(0deg);
-  -moz-transition: -moz-transform 0.7s ease-in;
-  -moz-transform: rotate(0deg);
-  -ms-transition: transform 0.7s ease-in;
-  -ms-transform: rotate(0deg);
-  transition: transform 0.7s ease-in;
-  transform: rotate(0deg);
-}
-
-.rotateInactive {
-  -webkit-transition: -webkit-transform 1s ease-in;
-  -webkit-transform: rotate(-180deg);
-  -moz-transition: -moz-transform 0.7s ease-in;
-  -moz-transform: rotate(-180deg);
-  -ms-transition: transform 0.7s ease-in;
-  -ms-transform: rotate(-180deg);
-  transition: transform 0.7s ease-in;
-  transform: rotate(-180deg);
-}
-
-
 /******************** navigation ********************/
 .nav {
   display: none;
 }
 
 a.menu {
-  background: url(arrow-down.png) no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+  background: url(img/arrow-down.png) no-repeat scroll 0 0 rgba(0, 0, 0, 0);
   display: block !important;
   height: 30px;
   left: 50%;
@@ -304,12 +247,16 @@ a.menu#down {
 }
 
 a.menu#up {
-  background: url(arrow-up.png) no-repeat scroll 0 0 transparent;
+  background: url(img/arrow-up.png) no-repeat scroll 0 0 transparent;
   top: 5px;
 }
 
+.leftForMobile {
+  left: 45%;
+}
+
 a#sections.threedotmenu {
-  background: url(menu.png) no-repeat scroll 0 0 / 100% auto rgba(0, 0, 0, 0);
+  background: url(img/menu.png) no-repeat scroll 0 0 / 100% auto rgba(0, 0, 0, 0);
   display: block !important;
   height: 30px;
   left: 1%;
@@ -334,15 +281,17 @@ a#sections.threedotmenu {
   color: #fff;
 }
 
-/*general*/
+/******************** content ********************/
 p {
   font-size: 1.2em;
 }
-/*end 1024px & lower****************************/
+
+}
 
 
-/* 720px $ lower */
+/******************** 720px $ lower ********************/
 @media screen and (max-width : 720px) {
+/******************** content ********************/
 .education .bg {
   background-position: -330px 0;
 }
@@ -350,6 +299,4 @@ p {
 }
 
 
-
-
-/*ie
+/******************** ie ********************/

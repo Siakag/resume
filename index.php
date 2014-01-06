@@ -13,16 +13,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="I Do Web offers truly beautiful web design and development to help you push your business forward.">
     <meta name="keywords" content="i do web, siaka g, web design and development consulting">
-    <link rel="shortcut icon" href="css/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="css/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="css/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="css/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/foundation.css" />
     <link rel="stylesheet" href="css/app.css" />
   </head>
 
   <body>
-    <a href="" class="show-for-small menu hide-text" id="down">down</a>
-    <a href="" class="show-for-small menu hide-text" id="up">up</a>
 
 <?php include 'includes/navContentSmall.php'; ?>
 
