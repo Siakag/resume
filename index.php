@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/foundation.css" />
     <link rel="stylesheet" href="css/app.css" />
+    <script src="js/modernizr.js"></script>
   </head>
 
   <body>
